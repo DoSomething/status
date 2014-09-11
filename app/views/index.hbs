@@ -1,0 +1,23 @@
+<h2 class="status-text-{{status}}">{{statusMessage}}</h2>
+
+{{#each environments }}
+  <p class="status-block status-icon status-icon-{{status}}">
+  <strong><a href="{{url.href}}">{{title}}</a></strong>
+
+  {{#if version }}
+  <span class="legal">Deployed platform version <a href="https://github.com/DoSomething/dosomething/releases/tag/{{version}}">{{version}}</a>{{#if timestamp}} {{{timeago timestamp}}}{{/if}}.</span>
+  {{else}}
+    <span class="legal">Deployment status unavailable.</span>
+  {{/if}}
+
+  {{#if online }}
+    <span class="legal legal-newline"><span class="status-text-{{online}}">{{prettyOnline}}</span> &mdash; {{uptime}}% uptime</span>
+  {{else}}
+    <span class="legal legal-newline">Uptime status unavailable.</span>
+  {{/if}}
+{{/each}}
+
+
+<p class="legal status-lastupdated">
+Last updated {{{ timeago last_updated }}}.<br>
+<a class="" href="/faq">Frequently Asked Questions</a></p>

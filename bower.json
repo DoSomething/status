@@ -1,0 +1,25 @@
+{
+  "name": "Status",
+  "version": "0.0.1",
+  "authors": [
+    "David Furnes <dfurnes@dosomething.org>"
+  ],
+  "description": "Status website for DoSomething.org.",
+  "license": "MIT",
+  "homepage": "http://status.dosomething.org",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/vendor",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "neue": "DoSomething/neue#~4.5.0",
+    "respond": "~1.4.2",
+    "html5shiv": "~3.7.2",
+    "jquery-timeago": "~1.4.1"
+  }
+}

@@ -1,0 +1,153 @@
+html, body {
+  background: #fff;
+}
+
+.chrome--wrapper {
+  max-width: 750px;
+  box-shadow: none;
+  margin: 0 auto;
+}
+
+@media all and (min-width: 699px) {
+  .chrome--wrapper {
+    padding: 150px 0;
+    margin: 0 auto;
+  }
+}
+
+h2 {
+  font-size: 42px;
+  font-weight: 300;
+}
+
+.status-logo {
+  display: block;
+  text-align: center;
+  padding: 18px;
+}
+
+.status-logo img {
+  width: 80px;
+  height: 70px;
+}
+
+
+.status-text-good, .status-text-true,
+.status-text-good a, .status-text-good a:hover, 
+.status-text-true a, .status-text-true a:hover {
+  color: #8dc63f;
+}
+
+.status-text-unstable {
+  color: #f39c12;
+}
+
+.status-text-unstable a, .status-text-unstable a:hover {
+  color: #f39c12;
+}
+
+.status-text-bad, .status-text-false,
+.status-text-bad a, .status-text-bad a:hover, 
+.status-text-false a, .status-text-false a:hover {
+  color: #ff4747;
+}
+
+h4 {
+  color: #222;
+  margin-bottom: 0;
+}
+
+.status-block p {
+  margin-bottom: 1rem;
+}
+
+.status-block strong a {
+  display: inline-block;
+  width: 150px;
+  color: #222;
+}
+
+.status-block strong a:hover {
+  color: #222;
+}
+
+.status-block .legal {
+  display: block;
+}
+
+@media all and (min-width: 699px) {
+  .status-block .legal {
+    display: inline;
+  }
+}
+
+.status-block .legal-newline {
+  display: block !important;
+}
+
+@media all and (min-width: 699px) {
+  .status-block .legal-newline {
+    padding-left: 155px;
+  }
+}
+
+.status-icon {
+  position: relative;
+}
+
+.status-icon:before {
+  font-family: "SSStandard";
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: none;
+  text-rendering: optimizeLegibility;
+  white-space: nowrap;
+  /*-webkit-font-feature-settings: "liga"; Currently broken in Chrome >= v22. Falls back to text-rendering. Safari is unaffected. */
+  -moz-font-feature-settings: "liga=1";
+  -moz-font-feature-settings: "liga";
+  -ms-font-feature-settings: "liga" 1;
+  -o-font-feature-settings: "liga";
+  font-feature-settings: "liga";
+  -webkit-font-smoothing: antialiased;
+  font-size: 0.8em;
+  position: absolute;
+  content: '●';
+  color: #ccc;
+  left: -24px;
+  top: 4px;
+}
+
+.status-icon-good:before, .status-icon-up:before {
+  color: #8dc63f;
+}
+
+.status-icon-bad:before {
+  color: #ff4747;
+}
+
+.status-icon-unstable:before {
+  color: #f39c12;
+}
+
+.status-icon-unknown:before {
+  color: #ccc;
+}
+
+.status-block {
+  margin-left: 32px;
+  margin-bottom: 9px;
+}
+
+.status-lastupdated {
+  margin-top: 32px;
+}
+
+.http-status-code {
+  float: right;
+  color: #ccc;
+}
+
+code.stack-trace {
+  font-size: 12px;
+  color: #aaa;
+}
