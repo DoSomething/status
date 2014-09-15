@@ -21,6 +21,9 @@
     "serve-favicon": "~2.0.1",
     "timeago": "^0.1.0"
   },
+  "domains": [
+    "status.dosomething.org"
+  ],
   "subdomain": "ds-status",
   "engines": {
     "node": "0.10.x"
