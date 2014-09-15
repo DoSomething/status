@@ -7,9 +7,9 @@ bower.commands
     console.log(installed);
   })
   .on('error', function (err)  {
-    renderer.error(err);
+    console.error(err);
     process.exit(1);
   })
   .on('log', function (log) {
-    renderer.log(log);
+    console.log(log);
   });

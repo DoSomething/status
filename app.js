@@ -24,6 +24,9 @@ var hbs = exphbs.create({
   }
 });
 
+// Install front-end assets
+require('./app/scripts/bower');
+
 // view engine setup
 app.engine('hbs', hbs.engine);
 app.set('views', path.join(__dirname, 'app/views'));
