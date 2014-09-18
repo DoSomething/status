@@ -5,11 +5,12 @@ var badge = require('gh-badges');
 
 /* GET '/': status page. */
 router.get('/', function(req, res) {
+  var statusCode = EnvironmentsController.overallStatus();
   var now = Math.round((new Date()).getTime() / 1000);
 
   var response = { 
-    status: EnvironmentsController.overallStatus(),
-    statusMessage: (status === "good" ? "All systems operational." : "Experiencing some turbulence."),
+    status: statusCode,
+    statusMessage: (statusCode === "good" ? "All systems operational." : "Experiencing some turbulence."),
     environments: EnvironmentsController.all(),
     last_updated: now
   };
