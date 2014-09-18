@@ -21,7 +21,15 @@ module.exports = {
     return "good";
   },
 
-  show: function() {
-    return Environments[id];
+  show: function(id) {
+    if(Environments.hasOwnProperty(id)) {
+      return Environments[id];
+    } else {
+      return {
+        'title': id,
+        'version': 'Unknown Environment',
+        'status': 'bad'
+      }
+    }
   }
 };
